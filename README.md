@@ -298,10 +298,8 @@ dotnet run -- draw-test   # Draw scenario via gateway
 | _e.g. Cursor / GitHub Copilot_ | _Code generation, refactoring_ | _Describe usage_ |
 | _e.g. ChatGPT_ | _Architecture planning_ | _Describe prompts used_ |
 
-**Prompt summary:** _[Add your own summary of AI-assisted development here]_
-
 ---
 
 ## License
 
-_Add your license here (e.g. MIT) before submission._
+This project is intended for educational and portfolio purposes.
