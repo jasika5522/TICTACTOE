@@ -1,0 +1,60 @@
+<div class="home-page" @pageEnter>
+  <header class="home-header">
+    <app-theme-toggle />
+  </header>
+
+  <main class="home-main">
+    <section class="hero-card glass-card">
+      <div class="logo">
+        <span class="logo-x">X</span>
+        <span class="logo-o">O</span>
+      </div>
+      <h1 class="title">Tic Tac Toe</h1>
+      <p class="tagline">Classic strategy. Modern experience.</p>
+
+      <div class="mode-cards">
+        <button
+          type="button"
+          class="mode-card"
+          [class.active]="mode === 'TwoPlayer'"
+          (click)="selectMode('TwoPlayer')"
+        >
+          <span class="mode-icon">👥</span>
+          <span class="mode-name">Player vs Player</span>
+        </button>
+        <button
+          type="button"
+          class="mode-card"
+          [class.active]="mode === 'VsComputer'"
+          (click)="selectMode('VsComputer')"
+        >
+          <span class="mode-icon">🤖</span>
+          <span class="mode-name">Player vs Computer</span>
+        </button>
+      </div>
+
+      <div class="player-inputs">
+        <label class="input-group">
+          <span>Player X</span>
+          <input type="text" [(ngModel)]="playerXName" placeholder="Player X" maxlength="20" />
+        </label>
+        <label class="input-group" *ngIf="mode === 'TwoPlayer'">
+          <span>Player O</span>
+          <input type="text" [(ngModel)]="playerOName" placeholder="Player O" maxlength="20" />
+        </label>
+        <label class="input-group" *ngIf="mode === 'VsComputer'">
+          <span>Opponent</span>
+          <input type="text" [ngModel]="'Computer'" disabled />
+        </label>
+      </div>
+
+      <button class="play-btn" type="button" (click)="play()">
+        Play Now
+      </button>
+    </section>
+
+    <aside class="stats-aside">
+      <app-statistics />
+    </aside>
+  </main>
+</div>

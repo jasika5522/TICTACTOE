@@ -1,0 +1,52 @@
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  min-height: 5.5rem;
+  border: 2px solid var(--border);
+  border-radius: 1rem;
+  background: var(--cell-bg);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+
+  &:not(:disabled):hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &.filled:not(.winning):disabled {
+    opacity: 0.95;
+  }
+
+  .mark {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  &.x .mark { color: var(--x-color); }
+  &.o .mark { color: var(--o-color); }
+
+  &.winning {
+    background: var(--win-bg);
+    border-color: var(--win-border);
+    animation: pulse-win 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-win {
+  0%, 100% { box-shadow: 0 0 0 0 var(--win-glow); }
+  50% { box-shadow: 0 0 20px 4px var(--win-glow); }
+}
+
+@media (max-width: 600px) {
+  .cell { min-height: 4.5rem; border-radius: 0.75rem; }
+}

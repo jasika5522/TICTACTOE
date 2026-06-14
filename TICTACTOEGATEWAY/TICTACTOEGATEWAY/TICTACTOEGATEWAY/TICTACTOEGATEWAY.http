@@ -1,0 +1,6 @@
+@TICTACTOEGATEWAY_HostAddress = http://localhost:5240
+
+GET {{TICTACTOEGATEWAY_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

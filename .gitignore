@@ -1,0 +1,94 @@
+# =========================
+# .NET / Visual Studio
+# =========================
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+*.ncrunch*
+_ReSharper*/
+[Tt]est[Rr]esult*/
+*.DotSettings.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.pubxml
+*.publishproj
+PublishScripts/
+*.azurePubxml
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# User secrets / local config
+**/appsettings.Development.json
+**/secrets.json
+*.pfx
+
+# =========================
+# Angular / Node
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+tmp/
+out-tsc/
+bazel-out/
+.angular/
+.sass-cache/
+coverage/
+libpeerconnection.log
+testem.log
+typings/
+connect.lock
+
+# =========================
+# IDEs
+# =========================
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Misc
+# =========================
+*.log
+*.cache
+agent-transcripts/

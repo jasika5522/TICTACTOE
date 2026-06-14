@@ -1,0 +1,11 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "TicTacToeDb": "Host=localhost;Port=5432;Database=postgres;Username=tictactoe_app;Password=YOUR_PASSWORD_HERE;"
+  }
+}

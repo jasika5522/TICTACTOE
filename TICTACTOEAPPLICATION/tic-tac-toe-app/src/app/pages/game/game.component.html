@@ -1,0 +1,61 @@
+<div class="game-page" @pageEnter *ngIf="session">
+  <header class="game-header">
+    <div class="header-left">
+      <h1 class="game-title">Tic Tac Toe</h1>
+      <p class="mode-badge">{{ session.mode === 'TwoPlayer' ? 'PvP' : 'vs CPU' }}</p>
+    </div>
+    <app-theme-toggle />
+  </header>
+
+  <div class="game-layout">
+    <section class="game-main">
+      <app-scoreboard
+        [scoreboard]="gameState?.scoreboard ?? null"
+        [playerXName]="session.playerXName"
+        [playerOName]="session.playerOName"
+      />
+
+      <p class="turn-indicator" *ngIf="gameState?.status === 'InProgress'">
+        {{ turnLabel }}
+      </p>
+      <p class="status-message won" *ngIf="gameState?.status === 'Won'">
+        {{ modalTitle }}
+      </p>
+      <p class="status-message draw" *ngIf="gameState?.status === 'Draw'">
+        It's a Draw!
+      </p>
+
+      <app-board
+        [gameState]="gameState"
+        (cellClick)="onCellClick($event)"
+      />
+
+      <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      <app-game-controls
+        [canUndo]="canUndo"
+        [loading]="loading"
+        (newGame)="onNewGame()"
+        (resetGame)="onResetGame()"
+        (resetScore)="onResetScore()"
+        (undo)="onUndo()"
+        (goHome)="onGoHome()"
+      />
+    </section>
+
+    <aside class="game-aside">
+      <app-statistics />
+      <app-move-history [moves]="gameState?.moveHistory ?? []" />
+    </aside>
+  </div>
+
+  <app-winner-modal
+    [visible]="showModal"
+    [title]="modalTitle"
+    [subtitle]="gameState?.status === 'Draw' ? 'Great game — nobody wins this round.' : 'Congratulations!'"
+    [isWin]="gameState?.status === 'Won'"
+    [isDraw]="gameState?.status === 'Draw'"
+    (playAgain)="onPlayAgain()"
+    (goHome)="onGoHome()"
+  />
+</div>

@@ -1,0 +1,24 @@
+<div class="history-card glass-card">
+  <h3 class="history-title">Move History</h3>
+
+  <table class="history-table" *ngIf="moves.length; else empty">
+    <thead>
+      <tr>
+        <th>Move</th>
+        <th>Player</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let move of moves" [class.player-x]="move.player === 'X'" [class.player-o]="move.player === 'O'">
+        <td>{{ move.moveNumber }}</td>
+        <td class="player-cell">{{ move.player }}</td>
+        <td>{{ positionLabel(move) }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #empty>
+    <p class="empty">No moves yet.</p>
+  </ng-template>
+</div>
