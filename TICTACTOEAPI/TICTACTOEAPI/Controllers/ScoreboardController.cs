@@ -14,7 +14,7 @@ namespace TICTACTOEAPI.Controllers
         {
             _scoreRepo = scoreRepo;
         }
-
+        //To get scoreboard data
         [HttpGet]
         public async Task<ActionResult<ScoreboardDto>> GetScoreboard()
         {
