@@ -162,7 +162,7 @@ dotnet run
 - Routes defined in `ocelot.json` → downstream `https://localhost:7241`
 - CORS enabled for `http://localhost:4200`
 
-> **Build tip:** Stop running API/Gateway processes before rebuilding in Visual Studio (`Stop-Process -Name TICTACTOEAPI,TICTACTOEGATEWAY -Force`).
+> **Build tip:**  Stop running API/Gateway processes before rebuilding in Visual Studio (`Stop-Process -Name TICTACTOEAPI,TICTACTOEGATEWAY -Force`).
 
 ### 4. Angular Frontend (port 4200)
 
@@ -298,10 +298,8 @@ dotnet run -- draw-test   # Draw scenario via gateway
 | _e.g. Cursor / GitHub Copilot_ | _Code generation, refactoring_ | _Describe usage_ |
 | _e.g. ChatGPT_ | _Architecture planning_ | _Describe prompts used_ |
 
-**Prompt summary:** _[Add your own summary of AI-assisted development here]_
-
 ---
 
 ## License
 
-_Add your license here (e.g. MIT) before submission._
+This project is intended for educational and portfolio purposes.
