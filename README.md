@@ -162,7 +162,7 @@ dotnet run
 - Routes defined in `ocelot.json` → downstream `https://localhost:7241`
 - CORS enabled for `http://localhost:4200`
 
-> **Build tip:** Stop running API/Gateway processes before rebuilding in Visual Studio (`Stop-Process -Name TICTACTOEAPI,TICTACTOEGATEWAY -Force`).
+> **Build tip:**  Stop running API/Gateway processes before rebuilding in Visual Studio (`Stop-Process -Name TICTACTOEAPI,TICTACTOEGATEWAY -Force`).
 
 ### 4. Angular Frontend (port 4200)
 
