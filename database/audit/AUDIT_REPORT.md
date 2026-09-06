@@ -8,6 +8,7 @@
 
 ## 1. Dapper Call Inventory
 
+
 | Function Name | Repository Method | SQL | C# Parameter Types | Expected PG Signature |
 |---|---|---|---|---|
 | `create_game` | `GameRepository.CreateGameAsync` | `SELECT create_game(@Id, @Mode)` | `Guid`, `string` | `create_game(uuid, text) → uuid` |
