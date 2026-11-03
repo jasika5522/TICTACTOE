@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="TICTACTOEAPI/TICTACTOEAPI.csproj" />
+  <Project Path="PortfolioService/PortfolioService.csproj" />
 </Solution>

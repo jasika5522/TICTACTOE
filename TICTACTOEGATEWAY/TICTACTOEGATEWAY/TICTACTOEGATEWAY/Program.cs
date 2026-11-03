@@ -12,9 +12,22 @@ builder.Services.AddOcelot(builder.Configuration)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular", policy =>
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod());
+    {
+        policy.AllowAnyHeader().AllowAnyMethod();
+        if (builder.Environment.IsDevelopment())
+        {
+            policy.SetIsOriginAllowed(origin =>
+                origin.StartsWith("http://localhost:", StringComparison.OrdinalIgnoreCase) ||
+                origin.StartsWith("https://localhost:", StringComparison.OrdinalIgnoreCase));
+        }
+        else
+        {
+            policy.WithOrigins(
+                "http://localhost:4200",
+                "http://localhost:5232",
+                "https://localhost:7229");
+        }
+    });
 });
 
 var app = builder.Build();

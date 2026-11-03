@@ -28,6 +28,71 @@ if (args.Length > 0 && args[0] == "apply-fix")
     return;
 }
 
+if (args.Length > 0 && args[0] == "apply-portfolio")
+{
+    var adminConn = Environment.GetEnvironmentVariable("PORTFOLIO_DB_ADMIN")
+        ?? "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
+    var portfolioConn = Environment.GetEnvironmentVariable("PORTFOLIO_DB")
+        ?? "Host=localhost;Port=5432;Database=portfolio;Username=postgres;Password=postgres;";
+    var migrationFile = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "migrations", "003_portfolio_users_registration.sql");
+
+    Console.WriteLine("Checking PostgreSQL admin connection...");
+    await using (var conn = new NpgsqlConnection(adminConn))
+    {
+        await conn.OpenAsync();
+        await using var ver = new NpgsqlCommand("SELECT version()", conn);
+        Console.WriteLine($"Connected: {await ver.ExecuteScalarAsync()}");
+
+        await using var checkDb = new NpgsqlCommand("SELECT 1 FROM pg_database WHERE datname = 'portfolio'", conn);
+        if (await checkDb.ExecuteScalarAsync() is null)
+        {
+            Console.WriteLine("Creating database: portfolio");
+            await using var createDb = new NpgsqlCommand("CREATE DATABASE portfolio", conn);
+            await createDb.ExecuteNonQueryAsync();
+        }
+        else
+        {
+            Console.WriteLine("Database 'portfolio' already exists.");
+        }
+    }
+
+    if (!File.Exists(migrationFile))
+    {
+        Console.WriteLine($"Migration not found: {migrationFile}");
+        return;
+    }
+
+    var sql = await File.ReadAllTextAsync(migrationFile);
+    await using (var conn = new NpgsqlConnection(portfolioConn))
+    {
+        await conn.OpenAsync();
+        await using var cmd = new NpgsqlCommand(sql, conn);
+        await cmd.ExecuteNonQueryAsync();
+        Console.WriteLine($"Migration applied: {Path.GetFileName(migrationFile)}");
+    }
+
+    await using (var conn = new NpgsqlConnection(portfolioConn))
+    {
+        await conn.OpenAsync();
+        await using var tableCheck = new NpgsqlCommand(
+            "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'users'", conn);
+        Console.WriteLine($"users table present: {(long)(await tableCheck.ExecuteScalarAsync() ?? 0L) == 1}");
+
+        await using var fnCheck = new NpgsqlCommand(
+            """
+            SELECT proname FROM pg_proc p
+            JOIN pg_namespace n ON p.pronamespace = n.oid
+            WHERE n.nspname = 'public' AND p.proname IN ('register_user', 'email_exists')
+            ORDER BY 1
+            """, conn);
+        await using var reader = await fnCheck.ExecuteReaderAsync();
+        while (await reader.ReadAsync())
+            Console.WriteLine($"function: {reader.GetString(0)}");
+    }
+
+    return;
+}
+
 if (args.Length > 0 && args[0] == "list")
 {
     await using var conn = new NpgsqlConnection(connStr);
@@ -130,4 +195,4 @@ if (args.Length > 0 && args[0] == "verify")
     return;
 }
 
-Console.WriteLine("Usage: dotnet run -- [apply|apply-fix|list|verify]");
+Console.WriteLine("Usage: dotnet run -- [apply|apply-fix|apply-portfolio|list|verify]");

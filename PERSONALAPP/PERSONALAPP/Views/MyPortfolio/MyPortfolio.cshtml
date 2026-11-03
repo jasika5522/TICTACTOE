@@ -1,0 +1,659 @@
+﻿@{
+    Layout = "_LayoutPortfolio";
+    ViewData["Title"] = "Jasika Saha | Software Engineer Portfolio";
+    var linkedInUrl = "https://www.linkedin.com/in/jasika-saha-968a85208";
+}
+
+<a class="pf-skip-link" href="#main-content">Skip to content</a>
+
+<nav class="pf-nav" id="pfNav" aria-label="Primary">
+    <div class="pf-nav-inner">
+        <a class="pf-brand" href="#hero">
+            <span class="pf-brand-dot" aria-hidden="true"></span>
+            Jasika Saha
+        </a>
+        <button type="button" class="pf-nav-toggle" id="pfNavToggle" aria-expanded="false" aria-controls="pfNavCollapse" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-4"></i>
+        </button>
+        <div class="pf-nav-collapse" id="pfNavCollapse">
+            <span class="pf-nav-indicator" id="pfNavIndicator" aria-hidden="true"></span>
+            <ul class="pf-nav-links" id="pfNavLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#learning">Learning</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pf-main" id="main-content">
+    <section class="pf-hero pf-section" id="hero">
+        <div class="pf-hero-bg-orb pf-hero-bg-orb--1" aria-hidden="true"></div>
+        <div class="pf-hero-bg-orb pf-hero-bg-orb--2" aria-hidden="true"></div>
+        <div class="pf-container">
+            <div class="pf-hero-grid">
+                <div class="reveal pf-hero-content">
+                    <div class="pf-hero-badge">
+                        <span class="pulse" aria-hidden="true"></span>
+                        Open to impactful engineering opportunities
+                    </div>
+                    <h1 class="pf-hero-name pf-text-reveal">
+                        Hi, I'm <span class="pf-gradient-text">Jasika Saha</span>
+                    </h1>
+                    <p class="pf-hero-title">
+                        <span class="pf-hero-title-static">I'm a </span>
+                        <span class="pf-typewriter" id="pfTypewriter" aria-live="polite">Software Engineer</span>
+                    </p>
+                    <p class="pf-hero-intro">
+                        I build scalable, secure web applications and REST APIs with 2+ years of hands-on industry experience.
+                        I specialize in backend systems with C# and ASP.NET Core, modern Angular frontends, and PostgreSQL-backed microservices architectures.
+                    </p>
+                    <div class="pf-tech-pills pf-tech-pills--animated" aria-label="Core technologies">
+                        <span class="pf-tech-pill" style="--pill-i: 0">C#</span>
+                        <span class="pf-tech-pill" style="--pill-i: 1">ASP.NET Core</span>
+                        <span class="pf-tech-pill" style="--pill-i: 2">Angular</span>
+                        <span class="pf-tech-pill" style="--pill-i: 3">PostgreSQL</span>
+                        <span class="pf-tech-pill" style="--pill-i: 4">Microservices</span>
+                    </div>
+                    <div class="pf-hero-actions">
+                        <a class="pf-btn pf-btn-primary" href="#projects">
+                            <i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>
+                            View My Work
+                        </a>
+                        <a class="pf-btn pf-btn-outline" href="@Url.Content("~/resume/Jasika_Saha_Resume.pdf")" download="Jasika_Saha_Resume.pdf">
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                            Download Resume
+                        </a>
+                        <a class="pf-btn pf-btn-outline" href="#contact">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                            Contact Me
+                        </a>
+                    </div>
+                    <div class="pf-social-row">
+                        <a class="pf-social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                            <i class="bi bi-github" aria-hidden="true"></i>
+                        </a>
+                        <a class="pf-social-link" href="@linkedInUrl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pf-hero-visual reveal reveal-delay-2">
+                    <div class="pf-hero-glow" aria-hidden="true"></div>
+                    <div class="pf-hero-card">
+                        <div class="pf-hero-card-icon" aria-hidden="true">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h2 class="h5 mb-2">Enterprise Full-Stack Engineering</h2>
+                        <p class="text-secondary small mb-0">
+                            End-to-end delivery of government and enterprise platforms — from database design and REST APIs to role-based portals and secure financial workflows.
+                        </p>
+                        <div class="pf-hero-stat-grid">
+                            <div class="pf-stat">
+                                <div class="pf-stat-value" data-count="2" data-suffix="+">0+</div>
+                                <div class="pf-stat-label">Years Experience</div>
+                            </div>
+                            <div class="pf-stat">
+                                <div class="pf-stat-value" data-count="3" data-suffix="">0</div>
+                                <div class="pf-stat-label">Major Platforms</div>
+                            </div>
+                            <div class="pf-stat">
+                                <div class="pf-stat-value" data-count="30" data-suffix="%">0%</div>
+                                <div class="pf-stat-label">API Performance Gain</div>
+                            </div>
+                            <div class="pf-stat">
+                                <div class="pf-stat-value" data-count="40" data-suffix="%">0%</div>
+                                <div class="pf-stat-label">Manual Effort Reduced</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section" id="about">
+        <div class="pf-container">
+            <span class="pf-section-label reveal">About Me</span>
+            <h2 class="pf-section-title reveal">Building reliable software that scales</h2>
+            <div class="pf-about-grid">
+                <div class="pf-about-text reveal">
+                    <p>
+                        I'm a Software Engineer with 2+ years of industry experience delivering production-grade web applications,
+                        REST APIs, and microservices for enterprise and government domains.
+                    </p>
+                    <p>
+                        My strength lies in backend development using <strong>C#</strong> and <strong>ASP.NET Core</strong>, where I design clean architectures,
+                        optimize data access, and implement secure authentication and authorization. On the frontend, I build intuitive experiences with <strong>Angular</strong>,
+                        HTML5, CSS3, and Bootstrap.
+                    </p>
+                    <p>
+                        I work across the full stack — database design, query optimization, API integration, and secure application architecture —
+                        with a focus on maintainability, performance, and clear domain modeling. I also leverage <strong>AI-assisted development with Cursor AI</strong>
+                        to accelerate delivery while keeping code quality high.
+                    </p>
+                </div>
+                <div class="pf-about-highlights">
+                    <div class="pf-glass pf-highlight-item reveal reveal-delay-1">
+                        <i class="bi bi-layers" aria-hidden="true"></i>
+                        <div>
+                            <h4>Scalable Web &amp; API Systems</h4>
+                            <p>Microservices, REST APIs, and workflow-driven enterprise applications.</p>
+                        </div>
+                    </div>
+                    <div class="pf-glass pf-highlight-item reveal reveal-delay-2">
+                        <i class="bi bi-shield-lock" aria-hidden="true"></i>
+                        <div>
+                            <h4>Security-First Architecture</h4>
+                            <p>JWT authentication, RBAC, OTP verification, and audit-ready designs.</p>
+                        </div>
+                    </div>
+                    <div class="pf-glass pf-highlight-item reveal reveal-delay-3">
+                        <i class="bi bi-robot" aria-hidden="true"></i>
+                        <div>
+                            <h4>AI-Assisted Engineering</h4>
+                            <p>Cursor AI for code generation, debugging, and refactoring in daily development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section" id="skills">
+        <div class="pf-container">
+            <span class="pf-section-label reveal">Technical Skills</span>
+            <h2 class="pf-section-title reveal">Tools &amp; technologies I work with</h2>
+            <p class="pf-section-desc reveal">A focused stack for building secure, performant, and maintainable full-stack applications.</p>
+            <div class="pf-skills-grid">
+                <article class="pf-glass pf-skill-card reveal">
+                    <div class="pf-skill-header">
+                        <div class="pf-skill-icon"><i class="bi bi-braces" aria-hidden="true"></i></div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="pf-badge-list">
+                        <span class="pf-badge">C#</span>
+                        <span class="pf-badge">Java</span>
+                        <span class="pf-badge">JavaScript</span>
+                        <span class="pf-badge">TypeScript</span>
+                        <span class="pf-badge">SQL</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-skill-card reveal reveal-delay-1">
+                    <div class="pf-skill-header">
+                        <div class="pf-skill-icon"><i class="bi bi-server" aria-hidden="true"></i></div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="pf-badge-list">
+                        <span class="pf-badge">ASP.NET Core</span>
+                        <span class="pf-badge">ASP.NET Core Web API</span>
+                        <span class="pf-badge">ASP.NET MVC</span>
+                        <span class="pf-badge">Dapper</span>
+                        <span class="pf-badge">Entity Framework Core</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-skill-card reveal reveal-delay-2">
+                    <div class="pf-skill-header">
+                        <div class="pf-skill-icon"><i class="bi bi-window" aria-hidden="true"></i></div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="pf-badge-list">
+                        <span class="pf-badge">Angular</span>
+                        <span class="pf-badge">HTML5</span>
+                        <span class="pf-badge">CSS3</span>
+                        <span class="pf-badge">Bootstrap</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-skill-card reveal">
+                    <div class="pf-skill-header">
+                        <div class="pf-skill-icon"><i class="bi bi-database" aria-hidden="true"></i></div>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="pf-badge-list">
+                        <span class="pf-badge">PostgreSQL</span>
+                        <span class="pf-badge">MySQL</span>
+                        <span class="pf-badge">SQL Server</span>
+                        <span class="pf-badge">MongoDB</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-skill-card reveal reveal-delay-1">
+                    <div class="pf-skill-header">
+                        <div class="pf-skill-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
+                        <h3>Architecture</h3>
+                    </div>
+                    <div class="pf-badge-list">
+                        <span class="pf-badge">Microservices</span>
+                        <span class="pf-badge">Ocelot API Gateway</span>
+                        <span class="pf-badge">REST API Design</span>
+                        <span class="pf-badge">Dependency Injection</span>
+                        <span class="pf-badge">Repository Pattern</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-skill-card reveal reveal-delay-2">
+                    <div class="pf-skill-header">
+                        <div class="pf-skill-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+                        <h3>Security</h3>
+                    </div>
+                    <div class="pf-badge-list">
+                        <span class="pf-badge">JWT Authentication</span>
+                        <span class="pf-badge">RBAC</span>
+                        <span class="pf-badge">OTP Verification</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-skill-card reveal">
+                    <div class="pf-skill-header">
+                        <div class="pf-skill-icon"><i class="bi bi-tools" aria-hidden="true"></i></div>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="pf-badge-list">
+                        <span class="pf-badge">Git</span>
+                        <span class="pf-badge">Jira</span>
+                        <span class="pf-badge">Postman</span>
+                        <span class="pf-badge">Swagger</span>
+                        <span class="pf-badge">Visual Studio</span>
+                        <span class="pf-badge">VS Code</span>
+                        <span class="pf-badge">Cursor AI</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-skill-card reveal reveal-delay-1">
+                    <div class="pf-skill-header">
+                        <div class="pf-skill-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
+                        <h3>Core CS</h3>
+                    </div>
+                    <div class="pf-badge-list">
+                        <span class="pf-badge">OOP</span>
+                        <span class="pf-badge">DSA</span>
+                        <span class="pf-badge">Agile / Scrum</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section pf-section--alt" id="experience">
+        <div class="pf-container">
+            <span class="pf-section-label reveal">Professional Experience</span>
+            <h2 class="pf-section-title pf-text-reveal reveal">Career growth &amp; impact</h2>
+            <p class="pf-section-desc reveal">
+                One organization, four designations — a journey from induction in Mumbai to engineering leadership on enterprise e-governance platforms in Hyderabad.
+            </p>
+
+            <div class="pf-company-header pf-glass reveal">
+                <div class="pf-company-header-main">
+                    <div class="pf-company-icon" aria-hidden="true"><i class="bi bi-building"></i></div>
+                    <div>
+                        <h3 class="pf-company-name">CMS Computers India Private Limited</h3>
+                        <p class="pf-company-tagline">Enterprise software · E-governance · Digital transformation</p>
+                    </div>
+                </div>
+                <div class="pf-company-meta">
+                    <span class="pf-company-tenure"><i class="bi bi-calendar-range" aria-hidden="true"></i> August 2024 – Present</span>
+                    <span class="pf-career-duration-badge"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i> 4 role progressions</span>
+                </div>
+            </div>
+
+            <div class="pf-career-progress reveal" aria-label="Career progression path">
+                <div class="pf-career-progress-line" aria-hidden="true"></div>
+                <div class="pf-career-step pf-career-step--1">
+                    <span class="pf-career-step-role">Trainee</span>
+                    <span class="pf-career-step-loc"><i class="bi bi-geo-alt" aria-hidden="true"></i> Mumbai</span>
+                </div>
+                <div class="pf-career-step-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></div>
+                <div class="pf-career-step pf-career-step--2">
+                    <span class="pf-career-step-role">GET</span>
+                    <span class="pf-career-step-loc"><i class="bi bi-geo-alt" aria-hidden="true"></i> Bengaluru</span>
+                </div>
+                <div class="pf-career-step-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></div>
+                <div class="pf-career-step pf-career-step--3">
+                    <span class="pf-career-step-role">Junior SE</span>
+                    <span class="pf-career-step-loc"><i class="bi bi-geo-alt" aria-hidden="true"></i> Hyderabad</span>
+                </div>
+                <div class="pf-career-step-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></div>
+                <div class="pf-career-step pf-career-step--4 pf-career-step--current">
+                    <span class="pf-career-step-role">Software Engineer</span>
+                    <span class="pf-career-step-loc"><i class="bi bi-geo-alt" aria-hidden="true"></i> Hyderabad</span>
+                </div>
+            </div>
+
+            <div class="pf-career-timeline" id="pfCareerTimeline">
+                <article class="pf-career-milestone pf-career-milestone--accent-1 reveal" data-milestone="1">
+                    <div class="pf-career-rail" aria-hidden="true"><span class="pf-career-node"></span><span class="pf-career-connector"></span></div>
+                    <div class="pf-glass pf-career-card">
+                        <div class="pf-career-card-head">
+                            <div>
+                                <span class="pf-career-level">Milestone 1</span>
+                                <h3 class="pf-career-role">Trainee</h3>
+                                <div class="pf-career-meta">
+                                    <span><i class="bi bi-calendar3" aria-hidden="true"></i> Aug 2024 – Aug 2024 · 1 Month</span>
+                                    <span class="pf-career-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Mumbai, Maharashtra, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="pf-career-details">
+                            <summary><span class="pf-career-summary-text">View responsibilities</span><i class="bi bi-chevron-down pf-career-chevron" aria-hidden="true"></i></summary>
+                            <ul class="pf-exp-list">
+                                <li>Completed CMS's structured 360° induction and professional development program covering company projects, software development practices, communication, presentation skills, and workplace processes.</li>
+                                <li>Participated in technical knowledge-sharing sessions, project walkthroughs, mentor interactions, and daily doubt-resolution sessions.</li>
+                                <li>Gained foundational exposure to enterprise software development and project delivery practices through interactive sessions with technical and business teams.</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="pf-promotion-badge" aria-hidden="true"><i class="bi bi-arrow-up-short"></i> Promoted</div>
+                </article>
+
+                <article class="pf-career-milestone pf-career-milestone--accent-2 reveal" data-milestone="2">
+                    <div class="pf-career-rail" aria-hidden="true"><span class="pf-career-node"></span><span class="pf-career-connector"></span></div>
+                    <div class="pf-glass pf-career-card">
+                        <div class="pf-career-card-head">
+                            <div>
+                                <span class="pf-career-level">Milestone 2</span>
+                                <h3 class="pf-career-role">Graduate Engineering Trainee</h3>
+                                <div class="pf-career-meta">
+                                    <span><i class="bi bi-calendar3" aria-hidden="true"></i> Sep 2024 – Feb 2025 · 6 Months</span>
+                                    <span class="pf-career-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Bengaluru, Karnataka, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="pf-career-details">
+                            <summary><span class="pf-career-summary-text">View responsibilities</span><i class="bi bi-chevron-down pf-career-chevron" aria-hidden="true"></i></summary>
+                            <ul class="pf-exp-list">
+                                <li>Worked in a cross-functional team comprising Developers, Testers, Business Analysts, and Solution Architects.</li>
+                                <li>Designed and developed CertiFast, a Low-Code/No-Code certificate generation platform using MongoDB, Express.js, React.js, and Node.js.</li>
+                                <li>Contributed to requirement analysis and prepared SRS and FRS documentation, translating business requirements into functional and technical specifications.</li>
+                                <li>Developed a dynamic form builder with live preview, editing, and publishing capabilities.</li>
+                                <li>Built reusable certificate templates and configurable e-form workflows.</li>
+                                <li>Presented the solution and demonstrated key features to clients and stakeholders, incorporating feedback throughout the project lifecycle.</li>
+                                <li>Collaborated across development, testing, business analysis, and solution architecture teams.</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="pf-promotion-badge" aria-hidden="true"><i class="bi bi-arrow-up-short"></i> Promoted</div>
+                </article>
+
+                <article class="pf-career-milestone pf-career-milestone--accent-3 reveal" data-milestone="3">
+                    <div class="pf-career-rail" aria-hidden="true"><span class="pf-career-node"></span><span class="pf-career-connector"></span></div>
+                    <div class="pf-glass pf-career-card">
+                        <div class="pf-career-card-head">
+                            <div>
+                                <span class="pf-career-level">Milestone 3</span>
+                                <h3 class="pf-career-role">Junior Software Engineer</h3>
+                                <div class="pf-career-meta">
+                                    <span><i class="bi bi-calendar3" aria-hidden="true"></i> Mar 2025 – Jun 2026 · 1 Year 4 Months</span>
+                                    <span class="pf-career-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Hyderabad, Telangana, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="pf-career-details">
+                            <summary><span class="pf-career-summary-text">View responsibilities</span><i class="bi bi-chevron-down pf-career-chevron" aria-hidden="true"></i></summary>
+                            <ul class="pf-exp-list">
+                                <li>Developed and maintained scalable e-governance applications using ASP.NET Core, Angular, RESTful APIs, SQL Server, MySQL, and PostgreSQL.</li>
+                                <li>Contributed to government digital transformation projects, including Haryana Excise &amp; Taxation, HTAS 2.0, VAT Registration System, and Invest Meghalaya.</li>
+                                <li>Designed and implemented secure backend APIs and optimized database queries and stored procedures.</li>
+                                <li>Implemented complex business workflows, role-based access control, JWT authentication, Digital Signature Certificate (DSC) integration, and document management features.</li>
+                                <li>Worked in a microservices-based architecture with Ocelot API Gateway.</li>
+                                <li>Collaborated with cross-functional teams to deliver production-ready features, troubleshoot critical issues, and support application deployment.</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="pf-promotion-badge" aria-hidden="true"><i class="bi bi-arrow-up-short"></i> Promoted</div>
+                </article>
+
+                <article class="pf-career-milestone pf-career-milestone--accent-4 pf-career-milestone--current reveal" data-milestone="4">
+                    <div class="pf-career-rail" aria-hidden="true"><span class="pf-career-node pf-career-node--current"></span></div>
+                    <div class="pf-glass pf-career-card pf-career-card--current">
+                        <span class="pf-current-role-badge"><i class="bi bi-stars" aria-hidden="true"></i> Current Role</span>
+                        <div class="pf-career-card-head">
+                            <div>
+                                <span class="pf-career-level">Milestone 4</span>
+                                <h3 class="pf-career-role">Software Engineer</h3>
+                                <div class="pf-career-meta">
+                                    <span><i class="bi bi-calendar3" aria-hidden="true"></i> Jul 2026 – Present</span>
+                                    <span class="pf-career-location"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Hyderabad, Telangana, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <details class="pf-career-details" open>
+                            <summary><span class="pf-career-summary-text">View responsibilities</span><i class="bi bi-chevron-down pf-career-chevron" aria-hidden="true"></i></summary>
+                            <ul class="pf-exp-list">
+                                <li>Designing and developing the HTAS 2.0 e-Tendering platform for the Haryana Excise &amp; Taxation Department, covering applicant registration, document verification, Corpus, EMD and Participation Fee, tendering, bid evaluation, and allotment workflows.</li>
+                                <li>Designing end-to-end applicant and departmental workflows, including AETO verification, approval, rejection, correction, resubmission, application tracking, audit history, and controlled workflow transitions.</li>
+                                <li>Architecting and implementing scalable ASP.NET Core MVC/Web APIs with PostgreSQL, Dapper, and Ocelot API Gateway.</li>
+                                <li>Implementing REST API design, JWT authentication, and role-based access control.</li>
+                                <li>Designing PostgreSQL database architecture and business rules, including database functions, financial transactions, tender/bid mappings, document management, and payment-related workflows.</li>
+                                <li>Leveraging AI-assisted and agentic development workflows with Cursor AI for requirement analysis, implementation, debugging, refactoring, documentation, and solution development while validating generated code against system architecture and business requirements.</li>
+                            </ul>
+                        </details>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section" id="projects">
+        <div class="pf-container">
+            <span class="pf-section-label reveal">Featured Projects</span>
+            <h2 class="pf-section-title pf-text-reveal reveal">Selected work &amp; platforms</h2>
+            <p class="pf-section-desc reveal">Enterprise systems spanning e-tendering, taxation workflows, and document automation.</p>
+            <div class="pf-projects-grid">
+                <article class="pf-glass pf-project-card pf-project-card--featured reveal">
+                    <span class="pf-project-flag">Flagship</span>
+                    <div class="pf-project-icon" aria-hidden="true"><i class="bi bi-briefcase"></i></div>
+                    <h3>HTAS 2.0 – E-Tendering Platform</h3>
+                    <p>
+                        Enterprise-level e-Tendering application with end-to-end tender lifecycle management,
+                        financial transaction handling, and secure bid management for government excise operations.
+                    </p>
+                    <ul class="pf-project-impact">
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> End-to-end tender lifecycle &amp; financial workflows</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> JWT, RBAC &amp; transactional bid management</li>
+                    </ul>
+                    <div class="pf-badge-list mb-3">
+                        <span class="pf-badge">PostgreSQL</span>
+                        <span class="pf-badge">ASP.NET Core Web API</span>
+                        <span class="pf-badge">Dapper</span>
+                        <span class="pf-badge">Ocelot</span>
+                        <span class="pf-badge">JWT &amp; RBAC</span>
+                    </div>
+                    <div class="pf-project-links">
+                        <span class="disabled"><i class="bi bi-github" aria-hidden="true"></i> Repository</span>
+                        <span class="disabled"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Live Demo</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-project-card reveal reveal-delay-1">
+                    <div class="pf-project-icon" aria-hidden="true"><i class="bi bi-file-earmark-text"></i></div>
+                    <h3>VAT Registration System</h3>
+                    <p>
+                        Multi-step VAT registration platform with document verification, payment integration,
+                        and multi-level approval workflows integrated with government payment and signing services.
+                    </p>
+                    <ul class="pf-project-impact">
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Multi-step forms &amp; departmental approvals</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> eGRAS, OTP, DSC / eSign integrations</li>
+                    </ul>
+                    <div class="pf-badge-list mb-3">
+                        <span class="pf-badge">Angular</span>
+                        <span class="pf-badge">ASP.NET Core Web API</span>
+                        <span class="pf-badge">eGRAS</span>
+                        <span class="pf-badge">OTP</span>
+                        <span class="pf-badge">DSC / eSign</span>
+                    </div>
+                    <div class="pf-project-links">
+                        <span class="disabled"><i class="bi bi-github" aria-hidden="true"></i> Repository</span>
+                        <span class="disabled"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Live Demo</span>
+                    </div>
+                </article>
+                <article class="pf-glass pf-project-card reveal reveal-delay-2">
+                    <div class="pf-project-icon" aria-hidden="true"><i class="bi bi-award"></i></div>
+                    <h3>CertiFast – Low-Code / No-Code Platform</h3>
+                    <p>
+                        Certificate generation platform with dynamic form builder, live preview,
+                        reusable templates, and automated document generation.
+                    </p>
+                    <ul class="pf-project-impact">
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Dynamic form builder with live preview</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> ~40% reduction in manual certificate effort</li>
+                    </ul>
+                    <div class="pf-badge-list mb-3">
+                        <span class="pf-badge">MongoDB</span>
+                        <span class="pf-badge">Express.js</span>
+                        <span class="pf-badge">React.js</span>
+                        <span class="pf-badge">Node.js</span>
+                    </div>
+                    <div class="pf-project-links">
+                        <span class="disabled"><i class="bi bi-github" aria-hidden="true"></i> Repository</span>
+                        <span class="disabled"><i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Live Demo</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section pf-section--alt" id="education">
+        <div class="pf-container">
+            <span class="pf-section-label reveal">Education</span>
+            <h2 class="pf-section-title pf-text-reveal reveal">Academic journey</h2>
+            <p class="pf-section-desc reveal">From strong school foundations to engineering at KIIT — building the base for full-stack enterprise development.</p>
+            <div class="pf-edu-timeline">
+                <article class="pf-edu-milestone reveal">
+                    <div class="pf-edu-rail" aria-hidden="true"><span class="pf-edu-node"></span><span class="pf-edu-line"></span></div>
+                    <div class="pf-glass pf-edu-card pf-edu-card--secondary">
+                        <div class="pf-edu-icon" aria-hidden="true"><i class="bi bi-journal-bookmark"></i></div>
+                        <span class="pf-edu-level">Secondary Education (10th)</span>
+                        <h3 class="pf-edu-school-name">DAV Public School</h3>
+                        <div class="pf-edu-achievement"><i class="bi bi-trophy" aria-hidden="true"></i> 91% Academic Achievement</div>
+                    </div>
+                </article>
+                <article class="pf-edu-milestone reveal reveal-delay-1">
+                    <div class="pf-edu-rail" aria-hidden="true"><span class="pf-edu-node"></span><span class="pf-edu-line"></span></div>
+                    <div class="pf-glass pf-edu-card pf-edu-card--secondary">
+                        <div class="pf-edu-icon" aria-hidden="true"><i class="bi bi-mortarboard"></i></div>
+                        <span class="pf-edu-level">Intermediate (12th)</span>
+                        <h3 class="pf-edu-school-name">Cambridge School</h3>
+                        <p class="pf-edu-stream">Stream: Science (Physics, Chemistry, Mathematics – PCM)</p>
+                    </div>
+                </article>
+                <article class="pf-edu-milestone pf-edu-milestone--grad reveal reveal-delay-2">
+                    <div class="pf-edu-rail" aria-hidden="true"><span class="pf-edu-node pf-edu-node--grad"></span></div>
+                    <div class="pf-glass pf-edu-card pf-edu-card--grad">
+                        <span class="pf-edu-grad-badge"><i class="bi bi-stars" aria-hidden="true"></i> Graduation</span>
+                        <div class="pf-edu-icon pf-edu-icon--grad" aria-hidden="true"><i class="bi bi-building"></i></div>
+                        <span class="pf-edu-level">B.Tech – Computer Science and Engineering</span>
+                        <h3 class="pf-edu-school-name">Kalinga Institute of Industrial Technology (KIIT)</h3>
+                        <div class="pf-edu-meta">
+                            <span><i class="bi bi-calendar3" aria-hidden="true"></i> June 2020 – September 2024</span>
+                            <span class="pf-edu-achievement pf-edu-achievement--inline"><i class="bi bi-star-fill" aria-hidden="true"></i> CGPA: 8.89 / 10</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section" id="certifications">
+        <div class="pf-container">
+            <span class="pf-section-label reveal">Certifications &amp; Achievements</span>
+            <h2 class="pf-section-title reveal">Continuous learning &amp; recognition</h2>
+            <div class="pf-certs-grid">
+                <div class="pf-glass pf-cert-item reveal"><i class="bi bi-patch-check-fill" aria-hidden="true"></i><span>AWS Academy – Data Analytics</span></div>
+                <div class="pf-glass pf-cert-item reveal reveal-delay-1"><i class="bi bi-patch-check-fill" aria-hidden="true"></i><span>AWS Academy – Introduction to Cloud</span></div>
+                <div class="pf-glass pf-cert-item reveal reveal-delay-2"><i class="bi bi-trophy-fill" aria-hidden="true"></i><span>Flipkart GRiD 4.0 – Software Development Challenge</span></div>
+                <div class="pf-glass pf-cert-item reveal"><i class="bi bi-code-square" aria-hidden="true"></i><span>HackerRank – Problem Solving (Intermediate)</span></div>
+                <div class="pf-glass pf-cert-item reveal reveal-delay-1"><i class="bi bi-database-fill" aria-hidden="true"></i><span>HackerRank – SQL (Intermediate)</span></div>
+                <div class="pf-glass pf-cert-item reveal reveal-delay-2"><i class="bi bi-cup-hot-fill" aria-hidden="true"></i><span>HackerRank – Java (Basic)</span></div>
+                <div class="pf-glass pf-cert-item reveal"><i class="bi bi-braces-asterisk" aria-hidden="true"></i><span>HackerRank – React (Basic)</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section" id="learning">
+        <div class="pf-container">
+            <span class="pf-section-label reveal">Currently Learning</span>
+            <h2 class="pf-section-title reveal">Growing beyond the stack</h2>
+            <p class="pf-section-desc reveal">Expanding depth in architecture, AI, and next-generation development practices.</p>
+            <div class="pf-learning-tags reveal">
+                <span class="pf-learning-tag"><i class="bi bi-diagram-2" aria-hidden="true"></i>System Design</span>
+                <span class="pf-learning-tag"><i class="bi bi-stars" aria-hidden="true"></i>Generative AI</span>
+                <span class="pf-learning-tag"><i class="bi bi-cpu" aria-hidden="true"></i>Agentic Development</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pf-section" id="contact">
+        <div class="pf-container">
+            <span class="pf-section-label reveal">Contact</span>
+            <h2 class="pf-section-title reveal">Let's connect</h2>
+            <div class="pf-contact-grid">
+                <div class="pf-glass pf-contact-card reveal">
+                    <ul class="pf-contact-list">
+                        <li>
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                            <div>
+                                <div class="small text-secondary">Email</div>
+                                <a href="mailto:jasikasaha@gmail.com">jasikasaha@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone" aria-hidden="true"></i>
+                            <div>
+                                <div class="small text-secondary">Phone</div>
+                                <a href="tel:+918877571258">+91 8877571258</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                            <div>
+                                <div class="small text-secondary">Location</div>
+                                <span>Hyderabad, Telangana, India</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                            <div>
+                                <div class="small text-secondary">LinkedIn</div>
+                                <a href="@linkedInUrl" target="_blank" rel="noopener noreferrer">linkedin.com/in/jasika-saha-968a85208</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="bi bi-github" aria-hidden="true"></i>
+                            <div>
+                                <div class="small text-secondary">GitHub</div>
+                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com/your-profile</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pf-glass pf-contact-closing reveal reveal-delay-1">
+                    <h3>Thank you for visiting my portfolio.</h3>
+                    <p>
+                        I'm passionate about building dependable software for complex domains — from tendering and taxation to automated document platforms.
+                        If you're hiring for full-stack or backend engineering roles, or want to collaborate on meaningful products, I'd love to hear from you.
+                    </p>
+                    <a class="pf-btn pf-btn-primary mt-4 align-self-start" href="mailto:jasikasaha@gmail.com">
+                        <i class="bi bi-send" aria-hidden="true"></i>
+                        Send an Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="pf-footer">
+    <div class="pf-container">
+        <p class="mb-1">&copy; @DateTime.UtcNow.Year Jasika Saha. All rights reserved.</p>
+        <p class="mb-0">
+            Built with ASP.NET Core MVC ·
+            <a href="#hero">Back to top</a>
+        </p>
+    </div>
+</footer>
+
+<button type="button" class="pf-scroll-top" id="pfScrollTop" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+</button>

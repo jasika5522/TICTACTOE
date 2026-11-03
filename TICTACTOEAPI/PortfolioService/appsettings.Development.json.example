@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "PortfolioDb": "Host=localhost;Port=5432;Database=portfolio;Username=postgres;Password=YOUR_PASSWORD;"
+  }
+}

@@ -1,0 +1,26 @@
+@PortfolioService_HostAddress = https://localhost:7252
+@Gateway_HostAddress = https://localhost:7000
+
+### Register user (direct to Portfolio Service)
+POST {{PortfolioService_HostAddress}}/api/portfolio/register
+Content-Type: application/json
+
+{
+  "fullName": "Jasika Saha",
+  "email": "jasika@example.com",
+  "mobileNumber": "9876543210",
+  "password": "Password@123",
+  "confirmPassword": "Password@123"
+}
+
+### Register user (through Ocelot Gateway)
+POST {{Gateway_HostAddress}}/api/portfolio/register
+Content-Type: application/json
+
+{
+  "fullName": "Jasika Saha",
+  "email": "jasika@example.com",
+  "mobileNumber": "9876543210",
+  "password": "Password@123",
+  "confirmPassword": "Password@123"
+}

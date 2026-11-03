@@ -1,0 +1,5 @@
+{
+  "ApiGateway": {
+    "BaseUrl": "https://localhost:7000"
+  }
+}
