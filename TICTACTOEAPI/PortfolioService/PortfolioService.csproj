@@ -15,4 +15,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Document\" />
+    <Folder Include="DAL\Implementations\NewFolder\" />
+  </ItemGroup>
+
 </Project>
